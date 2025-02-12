@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ['*']
 CORS_ALLOWED_ORIGINS = [
     "https://alldigishop.ir",
     "http://localhost:8080",
-    "39df19fb-4a90-476c-9767-a2d2dabe0069.cfargotunnel.com",
+    "https://39df19fb-4a90-476c-9767-a2d2dabe0069.cfargotunnel.com",
 ]
 CORS_ALLOW_METHODS = (
     "DELETE",
