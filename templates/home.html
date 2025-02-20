@@ -1,17 +1,7 @@
 {% extends "_base.html" %}
-
-{% block title %}Home{% endblock %}
+{% load static %}
+{% block title %}Home{% endblock title %}
 {% block content %}
-    <h1>This is our home page</h1>
-    {% if user.is_authenticated %}
-        <p>Welcome, {{ user.email }}</p>
-        <form action="{% url 'logout' %}" method="post">
-            {% csrf_token %}
-            <button type="submit">Logout</button>
-        </form>
-    {% else %}
-        <p>you are not logged in</p>
-        <a href="{% url 'login' %}">log in</a>
-        <a href="{% url 'signup' %}">sign up</a>
-    {% endif %}
-{% endblock %}
+    <h1>This is our home page.</h1>
+    <img class="bookcover" src="{% static 'images/dfp.jpg' %}" alt="book cover image">
+{% endblock content %}
