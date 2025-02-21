@@ -27,18 +27,21 @@
                 </li>
                 {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <!-- Logout Form -->
-                        <form method="post" action="{% url 'logout' %}">
-                            {% csrf_token %}
-                            <button type="submit" class="nav-link btn btn-dark">Log Out</button>
-                        </form>
+                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                     </li>
+{#                    <li class="nav-item">#}
+{#                        <!-- Logout Form -->#}
+{#                        <form method="Get" action="{% url 'account_logout' %}">#}
+{#                            {% csrf_token %}#}
+{#                            <button type="submit" class="nav-link btn btn-dark">Log Out</button>#}
+{#                        </form>#}
+{#                    </li>#}
                 {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'login' %}">Log In</a>
+                        <a class="nav-link" href="{% url 'account_login' %}">Log In</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+                        <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
                     </li>
                 {% endif %}
             </ul>
