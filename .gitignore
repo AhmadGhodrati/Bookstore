@@ -5,5 +5,4 @@ __pycache__/
 .env
 db.sqlite3
 .dockerignore
-docker-compose.yml
 .idea/
